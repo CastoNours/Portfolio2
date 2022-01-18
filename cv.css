@@ -1,0 +1,242 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "ubuntu", sans-serif;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	background: linear-gradient(to left, #8942a8, #ba382f);
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.retour{
+	z-index: 3;
+	margin-left: 20px;
+	margin-top: 10px;
+	color: #000;
+	position: relative;
+	width: 50px;
+	opacity: 0.7;
+}
+.retour:hover{
+	opacity: 1;
+}
+#pp{
+	min-height: 50px;
+	max-width: 150px;
+	max-height: 150px;
+	min-height: 50px;
+	margin-top: 50px;
+	border-radius: 20px;
+	margin-left: 20px;
+}
+p{
+
+	font-size: 25px;
+	color: white;
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 30px;
+}
+a{
+	color: black;
+	font-size: 27px;
+}
+a:hover{
+	color: #0c1ccc;
+}
+.cv {
+	z-index: 3;
+	display: flex;
+	flex-flow: row;
+}
+
+										
+
+													/*SKILLBAR*/
+
+.skills{
+	z-index: 2;
+	width: 100%;
+	max-width: 600px;
+	padding: 0 20px;
+}
+
+.skill-name{
+	z-index: 3;
+	font-size: 18px;
+	font-weight: 700;
+	color: #f1f1f1;
+	margin: 20px 0;
+}
+
+.skill-bar{
+	z-index: 4;
+	height: 14px;
+	/*background: #282828;*/
+	/*background: linear-gradient(90deg, #FF0000, #FFFF00, #ff00f3, #0033ff, #FF00C4, #ff0000);*/
+	background: linear-gradient(90deg, rgba(140,203,207,1) 2%, rgba(146,184,241,1) 12%, rgba(119,172,250,1) 26%, 
+		rgba(140,131,242,1) 40%, rgba(188,140,239,1) 55%, rgba(144,156,234,1) 75%, rgba(172,179,255,1) 87%, 
+		rgba(148,209,214,1) 98%);
+	background-size: 400%;
+	border-radius: 3px;
+	animation: animskillbar 15s linear infinite;
+}
+@keyframes animskillbar{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+}
+
+.skill-per{
+	z-index: 6;
+	height: 14px;
+	/*background: #e0e0e0;*/
+	background: white;
+	border-radius: 3px;
+	position: relative;
+	animation: fillbars 2.5s 1;
+}
+
+.skill-per::before{
+	content: attr(per);
+	position: absolute;
+	padding: 4px 6px;
+	background: #f1f1f1;
+	border-radius: 4px;
+	font-size: 12px;
+	top: -35px;
+	right: 0;
+	transform: translateX(50%);
+}
+
+.skill-per::after{
+	z-index: 5;
+	content: "";
+	position: absolute;
+	width: 8.5px;
+	height: 8.5px;
+	background: #f1f1f1;
+	top: -20px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+	border-radius: 2px;
+}
+
+@keyframes fillbars{
+	from{
+		width: 0;
+	}
+	to{
+		width: 100%;
+	}
+}
+										
+
+															/*CUBE*/
+.animation-area {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(to left, #8942a8, #ba382f);
+	width: 100%;
+	height: 100vh;
+	}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	bottom: -150px;
+	animation: cube 20s linear infinite;
+}
+.box-area li:nth-child(1) {
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+	animation-duration: 17s;
+}
+.box-area li:nth-child(2) {
+	left: 42%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 77%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 6s;
+}
+.box-area li:nth-child(4) {
+	left: 12%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 3s;
+	animation-duration: 20s;
+}
+.box-area li:nth-child(5) {
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 15s;
+	animation-duration: 13.8s;
+}
+.box-area li:nth-child(6) {
+	left: 50%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 18s;
+	animation-duration: 8.7s;
+}
+.box-area li:nth-child(7) {
+	left: 15%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 8s;
+	animation-duration: 2.8s;
+}
+.box-area li:nth-child(8) {
+	left: 38%;
+	width: 130px;
+	height: 130px;
+	animation-delay: 5s;
+}
+@keyframes cube {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	75%{
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+											
+
+														/*AUTRE*/

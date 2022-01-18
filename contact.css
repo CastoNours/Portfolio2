@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.retour{
+	z-index: 3;
+	color: #000;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	width: 50px;
+	opacity: 0.7;
+}
+.retour:hover{
+	opacity: 1;
+}
+input{
+	width: 100%;
+	padding: 5px;	
+	outline: none;
+}
+legend{
+	background: rgba(255, 255, 255, 1.0);
+	border-radius: 0.5rem;
+	padding: 0% 3%;
+}
+
+fieldset{
+	background: rgba(255, 255, 255, 0.4);
+	padding: 20px 40px;
+	line-height: 30.4px;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	height: 100vh;
+}
+label{
+	line-height: 1,9rem;
+	font-family: "Goudy Bookletter 1911", sans-serif;	
+}
+input[type="submit"]{
+	margin: 10px 0 0;
+	align-content: center;
+	transform: translate(2.2%);
+	padding: 8px;
+	border-radius: 0.2rem;
+	background: rgba(255, 255, 255, 0.6);
+}
+.txtarea{
+	height: 50px;
+}
+.formulaire{
+		z-index: 4;
+}
+
+
+										/*ANIMATION*/
+.animation-area {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(to left, #8942a8, #ba382f);
+	width: 100%;
+	height: 100vh;
+	}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	background: rgba(255, 255, 255, 0.2);
+	bottom: -150px;
+	animation: cube 20s linear infinite;
+}
+.box-area li:nth-child(1) {
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+	animation-duration: 17s;
+}
+.box-area li:nth-child(2) {
+	left: 42%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 77%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 6s;
+}
+.box-area li:nth-child(4) {
+	left: 12%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 3s;
+	animation-duration: 20s;
+}
+.box-area li:nth-child(5) {
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 15s;
+	animation-duration: 13.8s;
+}
+.box-area li:nth-child(6) {
+	left: 50%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 18s;
+	animation-duration: 8.7s;
+}
+.box-area li:nth-child(7) {
+	left: 15%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 8s;
+	animation-duration: 2.8s;
+}
+.box-area li:nth-child(8) {
+	left: 38%;
+	width: 130px;
+	height: 130px;
+	animation-delay: 5s;
+}
+@keyframes cube {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	75%{
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
